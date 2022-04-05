@@ -64,4 +64,8 @@ def loginUser(request):
           auth.login(request, user)
           return redirect('/home/')
 
-       
+
+
+def logout(request):
+  auth.logout(request)
+  return redirect('/auth/login')       
